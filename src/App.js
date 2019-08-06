@@ -10,8 +10,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Contact name="Mr. Appel" email="appel@epos.com" phone="021 887 0875" />
-        <Contact name="Mev. Pere" email="pere@epos.com" phone="021 887 0303" />
+
+        <div className="container">
+          <Contact name="Mr. Appel" email="appel@epos.com" phone="021 887 0875" />
+          <Contact name="Mev. Pere" email="pere@epos.com" phone="021 887 0303" />
+          <Contact name="Mrs. Feeney" email="ellyFarts@epos.com" phone="021 887 0303" />
+        </div>
 
       </div>
     );
