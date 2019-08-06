@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 const Header = (props) => {
@@ -27,8 +27,8 @@ Header.defaultProps = {
     titleName: "Appels en Pere App"
 }
 
-Header.PropTypes = {
-    branding: PropTypes.string.isRequired
+Header.propTypes = {
+    titleName: propTypes.string.isRequired
 }
 
 

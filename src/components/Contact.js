@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 
@@ -20,11 +20,11 @@ class Contact extends Component {
     }
 }
 
-Contact.PropTypes = {
+Contact.propTypes = {
 
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired
+    name: propTypes.string.isRequired,
+    email: propTypes.string.isRequired,
+    phone: propTypes.string.isRequired
 
 
 }
