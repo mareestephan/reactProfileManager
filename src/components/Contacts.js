@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Contact from './Contact'
+import { Consumer } from '../context.js'
 
 class Contacts extends Component {
 
@@ -13,20 +14,31 @@ class Contacts extends Component {
             contacts: newContacts
         })
     }
+
+
     render() {
 
-        const { contacts } = this.state;
 
         return (
-            <React.Fragment>
-                {contacts.map(contact =>
-                    <Contact
-                        key={contact.id}
-                        contact={contact} deleteClickHandler={this.deleteContact.bind(this, contact.id)} />
+            <Consumer>
+                {value => {
+                    const { contacts } = value;
+                    return (
+                        <React.Fragment>
+                            {contacts.map(contact =>
+                                <Contact
+                                    key={contact.id}
+                                    contact={contact}
+                                    deleteClickHandler={this.deleteContact.bind(this, contact.id)} />
 
-                )}
-            </React.Fragment>
+                            )}
+                        </React.Fragment>
+
+                    )
+                }}
+            </Consumer>
         )
+
     }
 }
 

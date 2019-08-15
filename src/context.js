@@ -33,6 +33,5 @@ export class Provider extends Component {
             </Context.Provider>
         )
     }
-
 }
 export const Consumer = Context.Consumer;
