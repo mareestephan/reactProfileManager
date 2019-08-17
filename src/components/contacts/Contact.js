@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import propTypes from 'prop-types';
-import { Consumer } from '../context.js'
+import { Consumer } from '../../context.js'
 
 
 
