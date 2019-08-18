@@ -24,6 +24,10 @@ class AddContact extends Component {
 
         dispatch({ type: 'ADD_CONTACT', payload: newContact });
 
+
+
+
+        // CLEAR STATE
         this.setState({
             name: '',
             email: '',
@@ -59,42 +63,33 @@ class AddContact extends Component {
                                 <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                                     {/* ++++++++++FORM INput+++++++++ */}
 
-                                    <div className="form-group">
-                                        <label htmlFor="name">Full Name</label>
-                                        <input type="text"
-                                            name="name"
-                                            className="form-control form-control-lg"
-                                            placeholder="Enter full name..."
-                                            value={name}
-                                            onChange={this.onChange}
-                                        />
-                                    </div>
-                                    {/* ++++++++++FORM INput+++++++++ */}
+                                    <TextInputGroup
+                                        label="Appelame"
+                                        name="name"
+                                        placeholder="Enter full name..."
+                                        value={name}
+                                        onChange={this.onChange}
 
-                                    <div className="form-group">
-                                        <label htmlFor="email">Email</label>
-                                        <input type="email"
-                                            name="email"
-                                            className="form-control form-control-lg"
-                                            placeholder="Enter Email..."
-                                            value={email}
-                                            onChange={this.onChange}
+                                    />
+                                    <TextInputGroup
+                                        label="Email"
+                                        name="email"
+                                        type="email"
+                                        placeholder="Enter Email..."
+                                        value={email}
+                                        onChange={this.onChange}
 
-                                        />
-                                    </div>
-                                    {/* ++++++++++FORM INput+++++++++ */}
+                                    />
+                                    <TextInputGroup
+                                        label="Phone"
+                                        name="phone"
+                                        placeholder="Enter phone number..."
+                                        value={phone}
+                                        onChange={this.onChange}
 
-                                    <div className="form-group">
-                                        <label htmlFor="name">Phone</label>
-                                        <input type="text"
-                                            name="phone"
-                                            className="form-control form-control-lg"
-                                            placeholder="Enter Mobile Number..."
-                                            value={phone}
-                                            onChange={this.onChange}
+                                    />
 
-                                        />
-                                    </div>
+
                                     {/* ++++++++++BUTTON+++++++++ */}
                                     {/* ++++++++++FORM INput+++++++++ */}
                                     <input type="submit" value="Add Contact" className="btn btn-block btn-light" />

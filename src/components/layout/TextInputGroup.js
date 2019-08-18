@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 
 const TextInputGroup = ({ label, name, value, placeholder, onChange, type }) => {
+
     return (
         <div className="form-group">
             <label htmlFor={name}>{label}</label>
@@ -23,7 +24,7 @@ TextInputGroup.propTypes = {
     value: PropTypes.string.isRequired,
     placeholder: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
 }
 
 TextInputGroup.defaultProps = {
