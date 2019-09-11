@@ -18,13 +18,18 @@ class AddContact extends Component {
 
         // CHECK FOR ERRORS
         if (name === '') {
-            this.setState({ errors: 'Name is required' });
+            this.setState({ errors: { name: 'Name is required' } });
+            return;
         }
         if (email === '') {
-            this.setState({ errors: 'Email is required' });
+            this.setState({ errors: { email: 'Email is required' } });
+            return;
+
         }
         if (phone === '') {
-            this.setState({ errors: 'Phone is required' });
+            this.setState({ errors: { phone: 'Phone is required' } });
+            return;
+
         }
 
         const newContact = {
@@ -77,7 +82,7 @@ class AddContact extends Component {
                                     {/* ++++++++++FORM INput+++++++++ */}
 
                                     <TextInputGroup
-                                        label="Appelame"
+                                        label="Name"
                                         name="name"
                                         placeholder="Enter full name..."
                                         value={name}
