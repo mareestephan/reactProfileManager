@@ -41,7 +41,7 @@ class Contact extends Component {
                                 <i onClick={() => this.setState({
                                     showContactInfo: !this.state.showContactInfo
                                 })} className="fas fa-sort-down"
-                                    style={{ cursor: 'pointer' }}
+                                    style={{ cursor: 'pointer', paddingLeft: '10px' }}
                                 />
                                 <i className="fas fa-times" style={{ cursor: 'pointer', float: 'right', color: 'red' }} onClick={this.onDeleteClick.bind(this, id, dispatch)}></i>
                             </h4>

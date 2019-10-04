@@ -51,10 +51,8 @@ class AddContact extends Component {
             phone: '',
             errors: {}
 
-        }
-
-        );
-
+        });
+        this.props.history.push('/')
 
     };
 
@@ -73,8 +71,11 @@ class AddContact extends Component {
                 {value => {
                     const { dispatch } = value;
                     return (
+
                         <div className="card mb-3">
-                            <div className="card-header">Add Contact</div>
+                            <h1 className="display-4 mb-2">
+                                <span className="text-info">Add</span>  Contact</h1>
+                            {/* <div className="card-header">Add Contact</div> */}
                             <div className="card-body">
                                 {/* ++++++++++FORM+++++++++ */}
 
