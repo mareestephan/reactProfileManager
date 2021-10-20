@@ -8,7 +8,7 @@ var inputs = document.getElementsByTagName(‘button’);
 
 for(var i=0; i<inputs.length; i++){
 if(inputs[i].getAttribute(‘type’)==‘submit’){
-  console.log("appels");
+  console.log("appels pere");
 
 }
 }
