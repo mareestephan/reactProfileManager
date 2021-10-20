@@ -1,4 +1,4 @@
-document.getElementById("form").addEventListener("submit", myFunction);
+document.getElementsByClassName("normal-state").addEventListener("submit", myFunction);
 
 function myFunction() {
   console.log("appels");
